@@ -39,10 +39,7 @@ class DottedBorder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Positioned.fill(
-          child: CustomPaint(
+    return CustomPaint(
             painter: _DashPainter(
               strokeWidth: strokeWidth,
               radius: radius,
@@ -51,15 +48,9 @@ class DottedBorder extends StatelessWidget {
               dashPattern: dashPattern,
               customPath: customPath,
               strokeCap: strokeCap,
+              child: child,
             ),
-          ),
-        ),
-        Padding(
-          padding: padding,
-          child: child,
-        ),
-      ],
-    );
+          );
   }
 
   bool _isValidDashPattern(List<double> dashPattern) {
