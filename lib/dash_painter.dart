@@ -71,8 +71,8 @@ class _DashPainter extends CustomPainter {
       ..addRRect(
         RRect.fromRectAndRadius(
           Rect.fromLTWH(
-            w > s ? (w - s) / 2 : 0,
-            h > s ? (h - s / 2) : 0,
+            w > s ? (w - s).abs() / 2 : 0,
+            h > s ? (h - s).abs() / 2 : 0,
             s,
             s,
           ),
