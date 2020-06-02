@@ -48,8 +48,8 @@ class DottedBorder extends StatelessWidget {
               dashPattern: dashPattern,
               customPath: customPath,
               strokeCap: strokeCap,
-              child: child,
             ),
+           child: child,
           );
   }
 
